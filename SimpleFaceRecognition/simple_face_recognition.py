@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Simple face detection example with OpenCV
+# Simple face recognition example with OpenCV
 # Requires Python 3 and OpenCV 3
 
 import cv2
@@ -55,9 +55,9 @@ def whoIs(fName):
 
 
 
-#recognizer = cv2.face.createFisherFaceRecognizer()
+recognizer = cv2.face.createFisherFaceRecognizer()
 #recognizer = cv2.face.createEigenFaceRecognizer()
-recognizer = cv2.face.createLBPHFaceRecognizer()
+#recognizer = cv2.face.createLBPHFaceRecognizer()
 
 faceFiles = glob.glob('facesdb/*/*.png')
 images, labels = __get_images_and_labels(faceFiles)
